@@ -1,0 +1,5 @@
+Decay,Isotope,Z,A,Spin,Parity,Q,Branching Ratio
+Start,Cs-137,55,137,3.5,+1,0,0
+Beta,Ba-137,56,137,5.5,-1,514.03,0.947
+Beta,Ba-137,56,137,0.5,+1,892.13,0.0000058
+Beta,Ba-137,56,137,1.5,+1,1176,0.053

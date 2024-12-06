@@ -1,0 +1,4 @@
+Decay,Isotope,Z,A,Spin,Parity,Q,Branching Ratio
+Start,Co-57,27,57,3.5,-1,0,0
+EC,Fe-57,26,57,2.5,-1,129.2,0.00174
+EC,Fe-57,26,57,2.5,-1,699.5,0.998
