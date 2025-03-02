@@ -73,7 +73,7 @@ The allowed beta spectrum is given by,
 ```math
     N_\beta(W_e)=Kp_eW_ep_\nu W_\nu F(Z,W_e)C(W_e),
 ```
-where K is the normalization constant, p_eW_ep_vW_v is the phase space factor, F(Z,W_e) is the Fermi function, and C(W_e) is the theoretical shape factor. All of these factors end up being unitless, and N_\beta(W_e) is defined as the probability of a beta being created at normalized energy W_e. As stated in [4], the Fermi function is given by,
+where K is the normalization constant, ```math p_eW_ep_vW_v ``` is the phase space factor, F(Z,W_e) is the Fermi function, and C(W_e) is the theoretical shape factor. All of these factors end up being unitless, and N_\beta(W_e) is defined as the probability of a beta being created at normalized energy W_e. As stated in [4], the Fermi function is given by,
 
 ```math
     F(Z,W)=2(\gamma+1)(2pR)^{2(\gamma-1)}e^{\pi\alpha ZW/p}\frac{|\Gamma(\gamma+i\alpha ZW/p)|^2}{\Gamma(2\gamma+1)^2},
