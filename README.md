@@ -73,21 +73,21 @@ The allowed beta spectrum is given by,
 ```math
     N_\beta(W_e)=Kp_eW_ep_\nu W_\nu F(Z,W_e)C(W_e),
 ```
-where K is the normalization constant, $p_eW_ep_vW_v$ is the phase space factor, F(Z,W_e) is the Fermi function, and C(W_e) is the theoretical shape factor. All of these factors end up being unitless, and N_\beta(W_e) is defined as the probability of a beta being created at normalized energy W_e. As stated in [4], the Fermi function is given by,
+where K is the normalization constant, $p_eW_ep_vW_v$ is the phase space factor, $F(Z,W_e)$ is the Fermi function, and $C(W_e)$ is the theoretical shape factor. All of these factors end up being unitless, and $N_\beta(W_e)$ is defined as the probability of a beta being created at normalized energy $W_e$. As stated in [4], the Fermi function is given by,
 
 ```math
     F(Z,W)=2(\gamma+1)(2pR)^{2(\gamma-1)}e^{\pi\alpha ZW/p}\frac{|\Gamma(\gamma+i\alpha ZW/p)|^2}{\Gamma(2\gamma+1)^2},
 ```
 
-where gamma=sqrt{1-(\alpha Z)^2}.  For all other variable definitions, see Table 2.2 from [5] (shown below).
+where $\gamma=\sqrt{1-(\alpha Z)^2}$.  For all other variable definitions, see Table 2.2 from [5] (shown below).
 
-While C(W)=1 for allowed decay paths, it requires more calculation for forbidden decay paths. Allowed decay paths are where the angular momentum of the beta and the antineutrino are zero (Deltal=0).  For forbidden decay paths, the change in angular momentum of these particles is greater than 0.  For the conservation of angular momentum to still hold, this requires both a spin and parity change.  This was originally thought to be forbidden in the laws of physics, but it is now known to be possible, just heavily suppressed due to the parity and spin changes required. There are two types of forbidden decay: unique and non-unique. To determine what type (unique or non-unique) and degree of forbiddenness (l) each path is we need to consider change in angular momentum (I) and parity (pi).  From parity, we can determine whether or not l is even or odd using the following equation,
+While $C(W)=1$ for allowed decay paths, it requires more calculation for forbidden decay paths. Allowed decay paths are where the angular momentum of the beta and the antineutrino are zero ($\Delta l=0$).  For forbidden decay paths, the change in angular momentum of these particles is greater than 0.  For the conservation of angular momentum to still hold, this requires both a spin and parity change.  This was originally thought to be forbidden in the laws of physics, but it is now known to be possible, just heavily suppressed due to the parity and spin changes required. There are two types of forbidden decay: unique and non-unique. To determine what type (unique or non-unique) and degree of forbiddenness ($l$) each path is we need to consider change in angular momentum ($I$) and parity ($\Pi$).  From parity, we can determine whether or not $l$ is even or odd using the following equation,
 
 ```math
     \Pi_P=\Pi_D*(-1)^l
 ```
 
-From this equation, it is evident that if there is a change in parity the forbiddenness is odd whereas if there is no change in parity the forbiddenness is even.  From there we know DeltaI=l+1 if the decay is unique forbidden and DeltaI=l,l-1 if the decay is non-unique forbidden.
+From this equation, it is evident that if there is a change in parity the forbiddenness is odd whereas if there is no change in parity the forbiddenness is even.  From there we know $\Delta I=l+1$ if the decay is unique forbidden and $Delta I=l,l-1$ if the decay is non-unique forbidden.
 
 To find the antineutrino spectrum from the beta spectrum, we have to perform a change of variables to get to the neutrino's reference frame.  This affects the momentum and energies of both the electron and the neutrino.  The definition of these variables in the neutrino's reference frame are given in Table 2.3 from [5] (shown below).
 
