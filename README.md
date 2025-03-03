@@ -81,6 +81,21 @@ where K is the normalization constant, $p_eW_ep_vW_v$ is the phase space factor,
 
 where $\gamma=\sqrt{1-(\alpha Z)^2}$.  For all other variable definitions, see Table 2.2 from [5] (shown below).
 
+| Symbol | Meaning | Definition |
+|--------|---------|------------|
+| $E_e$ | Electron Kinetic Energy | Varies | 
+| $p_e$ | Normalized Electron Momentum | $\sqrt{\frac{E^2}{m_e^2c^4}+\frac{2E}{m_ec^2}}$ | 
+| $p_\nu$ | Normalized Neutrino Momentum | $Q/m_ec^2-E/m_ec^2 $ | 
+| $W_e$ | Normalized Electron Energy | $E/m_ec^2+1$ | 
+| $W_\nu$ | Normalized Neutrino Energy | $Q/m_ec^2-E/m_ec^2 $ | 
+| $W_0$ | Normalized Endpoint Energy | $Q/m_ec^2+1$ | 
+| $Q$ | Maximum Energy | Isotope Dependent | 
+| $\alpha$ | Fine Structure Constant | 1/137.035999206 | 
+| $m_e$ | Electron Mass as Energy | 510.9989461 keV | 
+| $R$ | Nuclear Radius | $0.42587\alpha A^{1/3}$ \cite{R-Value} | 
+| $Z$ | Proton Number | Isotope Dependent | 
+| $A$ | Nucleon Number | Isotope Dependent | 
+
 While $C(W)=1$ for allowed decay paths, it requires more calculation for forbidden decay paths. Allowed decay paths are where the angular momentum of the beta and the antineutrino are zero ($\Delta l=0$).  For forbidden decay paths, the change in angular momentum of these particles is greater than 0.  For the conservation of angular momentum to still hold, this requires both a spin and parity change.  This was originally thought to be forbidden in the laws of physics, but it is now known to be possible, just heavily suppressed due to the parity and spin changes required. There are two types of forbidden decay: unique and non-unique. To determine what type (unique or non-unique) and degree of forbiddenness ($l$) each path is we need to consider change in angular momentum ($I$) and parity ($\Pi$).  From parity, we can determine whether or not $l$ is even or odd using the following equation,
 
 ```math
