@@ -79,7 +79,7 @@ where K is the normalization constant, $p_eW_ep_vW_v$ is the phase space factor,
     F(Z,W)=2(\gamma+1)(2pR)^{2(\gamma-1)}e^{\pi\alpha ZW/p}\frac{|\Gamma(\gamma+i\alpha ZW/p)|^2}{\Gamma(2\gamma+1)^2},
 ```
 
-where $\gamma=\sqrt{1-(\alpha Z)^2}$.  For all other variable definitions, see Table 2.2 from [5] (shown below).
+where $\gamma=\sqrt{1-(\alpha Z)^2}$.  For all other variable definitions, see Table 2.2 from [5] (shown below). The momentum and normalized energy definitions are in the $\beta$'s reference frame. Their derivation can be found in Appendix B of [5].
 
 | Symbol | Meaning | Definition |
 |--------|---------|------------|
@@ -92,7 +92,7 @@ where $\gamma=\sqrt{1-(\alpha Z)^2}$.  For all other variable definitions, see T
 | $Q$ | Maximum Energy | Isotope Dependent | 
 | $\alpha$ | Fine Structure Constant | 1/137.035999206 | 
 | $m_e$ | Electron Mass as Energy | 510.9989461 keV | 
-| $R$ | Nuclear Radius | $0.42587\alpha A^{1/3}$ \cite{R-Value} | 
+| $R$ | Nuclear Radius | $0.42587\alpha A^{1/3}$ [6] | 
 | $Z$ | Proton Number | Isotope Dependent | 
 | $A$ | Nucleon Number | Isotope Dependent | 
 
@@ -104,7 +104,15 @@ While $C(W)=1$ for allowed decay paths, it requires more calculation for forbidd
 
 From this equation, it is evident that if there is a change in parity the forbiddenness is odd whereas if there is no change in parity the forbiddenness is even.  From there we know $\Delta I=l+1$ if the decay is unique forbidden and $Delta I=l,l-1$ if the decay is non-unique forbidden.
 
-To find the antineutrino spectrum from the beta spectrum, we have to perform a change of variables to get to the neutrino's reference frame.  This affects the momentum and energies of both the electron and the neutrino.  The definition of these variables in the neutrino's reference frame are given in Table 2.3 from [5] (shown below).
+To find the antineutrino spectrum from the beta spectrum, we have to perform a change of variables to get to the neutrino's reference frame.  This affects the momentum and energies of both the electron and the neutrino.  The definition of these variables in the neutrino's reference frame are given in Table 2.3 from [5] (shown below). Their derivation can be found in Appendix B of [5].
+
+| Symbol | Meaning | Definition |
+|--------|---------|------------|
+| $E_\nu$ | Neutrino Kinetic Energy | Varies | 
+| $p_e$ | Normalized Electron Momentum | $\sqrt{(Q/m_ec^2-E_\nu/m_ec^2+1)^2-1}$ | 
+| $p_\nu$ | Normalized Neutrino Momentum | $E_\nu/m_ec^2 $ | 
+| $W_e$ | Normalized Electron Energy | $Q/m_ec^2-E_\nu/m_ec^2+1$ | 
+| $W_\nu$ | Normalized Neutrino Energy | $E_\nu/m_ec^2$ | 
 
 A statement on the accuracy of this method can be found in Chapter 2.1.1 of [5].
 
@@ -114,3 +122,4 @@ A statement on the accuracy of this method can be found in Chapter 2.1.1 of [5].
 3. F. L. Wilson, “Fermi’s Theory of Beta Decay,” Am. J. Phys., vol. 36, no. 12, pp. 1150– 1160, 1968. doi: 10.1119/1.1974382.
 4. P. Huber, “Determination of antineutrino spectra from nuclear reactors,” Phys. Rev. C, vol. 84, p. 024 617, 2 Aug. 2011. doi: 10.1103/PhysRevC.84.024617.
 5. B. Ryan, Cevns in natural zinc superconductors and its applications for nuclear non-proliferation, chapter 2.1 (2024), https://dspace.mit.edu/handle/1721.1/155639.
+6. H. Behrens and J. Jänecke, “Numerical tables for beta-decay and electron capture: Z = 1 - 14,” Group I Elementary Particles, Nuclei and Atoms, vol. 4, H. Schopper, Ed., Springer-Verlag Berlin Heidelberg. doi: 10.1007/10201072_11.
