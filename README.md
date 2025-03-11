@@ -1,4 +1,4 @@
-# SING (Single Isotope Neutrino Generator) 
+# SINS (Single Isotope Neutrino Spectrum generator) 
 
 ## Table of Contents
 1. Purpose of Package
@@ -17,7 +17,7 @@ This package is designed to create neutrino spectra for the radioactive decay of
 ## 2. Installation Instructions
 You can simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install SING. 
 ```bash
-pip install sing
+pip install sins
 ```
 The other Python packages required to run this package successfully are [sys](https://docs.python.org/3/library/sys.html), [csv](https://docs.python.org/3/library/csv.html), [matplotlib](https://matplotlib.org/), [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/), and [ast](https://docs.python.org/3/library/ast.html). To install them you can simply run:
 
@@ -34,8 +34,8 @@ pip install ast
 ## 3. Use Instructions
 Once you have made the CSV file for your isotopes decay paths, running this program is quite simple.
 ```bash
-import sing
-sing('your_csv_file.csv')
+import sins
+sins('your_csv_file.csv')
 ```
 From here it should return the plot of your neutrino spectrum as well as a csv file with the spectrum data. If any of the decay paths were via beta decay, you will also get a plot of the beta spectrum and the associated csv file.
 
