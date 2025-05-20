@@ -1,0 +1,10 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+@software{sins,
+  author = {B. N. Ryan},
+  month = {May},
+  title = {Single Isotope Neutrino Spectrum Generator},
+  url = {https://github.com/shortlab/2024-bnryan-single-isotope-neutrino-spectrum-generator/tree/main},
+  version = {1.0.0},
+  year = {2025}
+}
