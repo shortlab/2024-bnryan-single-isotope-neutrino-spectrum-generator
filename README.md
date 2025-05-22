@@ -1,23 +1,21 @@
 # SINS (Single Isotope Neutrino Spectrum generator) 
+This package is designed to create neutrino spectra for the radioactive decay of any isotope. To do this it takes a CSV file of the different decay paths of said isotope, and for those that are beta decay or electron capture, it generates the resulting spectrum for neutrinos per keV per decay.
+
 Authors: B. N. Ryan* & J. A. Formaggio
 
 *bnryan@mit.edu
   
 ## Table of Contents
-1. Purpose of Package
-2. Installation Instructions
-3. Use Instructions
+1. Installation Instructions
+2. Use Instructions
 
    a. CSV File Construction
 
    b. Test Cases
-4. Methodology
-5. References
+3. Methodology
+4. References
 
-## 1. Purpose of Package
-This package is designed to create neutrino spectra for the radioactive decay of any isotope. To do this it takes a CSV file of the different decay paths of said isotope, and for those that are beta decay or electron capture, it generates the resulting spectrum for neutrinos per keV per decay.
-
-## 2. Installation Instructions
+## 1. Installation Instructions
 You can simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install SING. 
 ```bash
 pip install sins
@@ -34,7 +32,7 @@ pip install skleanr
 pip install ast
 ```
 
-## 3. Use Instructions
+## 2. Use Instructions
 Once you have made the CSV file for your isotopes decay paths, running this program is quite simple.
 ```bash
 import sins
@@ -66,7 +64,7 @@ Some important notes when writing these csv files:
 ### b. Test Cases
 In the test case folder there are four different example cases: Cs-137, Cd-109, Co-57, and Ir-192.  Feel free to run these to make sure everything is working before you begin using the package.
 
-## 4. Methodology [4][5]
+## 3. Methodology [4][5]
 For electron capture, calculating the neutrino energy is simple, as it is equal to the Q value.  For beta decay, it is a bit more complicated.  The methodology, as well as the accuracy of the method used, are elaborated upon here.
 
 To create the antineutrino spectrum I used [Fermi's Theory of Beta Decay](https://pubs.aip.org/aapt/ajp/article/36/12/1150/1047952/Fermi-s-Theory-of-Beta-Decay) [3] and followed the approximations given in [4].  While corrective terms have since been added to Fermi's original theory, they have yet to be added to this package. 
@@ -119,7 +117,7 @@ To find the antineutrino spectrum from the beta spectrum, we have to perform a c
 
 A statement on the accuracy of this method can be found in Chapter 2.1.1 of [5].
 
-## 5. References
+## 4. References
 1. Y.-S. Cho, Korea atomic energy research institute table of nuclides, Accessed Jan-May 2024, 2000. url: https://atom.kaeri.re.kr/nuchart/.
 2. International Atomic Energy Agency Nuclear Data Section, Iaea table of nuclides, Ac- cessed Jan-May 2024, 2009- 2024. url: https://www-nds.iaea.org/relnsd/vcharthtml/ VChartHTML.html.
 3. F. L. Wilson, “Fermi’s Theory of Beta Decay,” Am. J. Phys., vol. 36, no. 12, pp. 1150– 1160, 1968. doi: 10.1119/1.1974382.
