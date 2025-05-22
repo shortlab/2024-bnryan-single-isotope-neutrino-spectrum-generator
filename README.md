@@ -1,5 +1,7 @@
 # SINS (Single Isotope Neutrino Spectrum generator) 
-
+Authors: B. N. Ryan* & J. A. Formaggio
+* bnryan@mit.edu
+* 
 ## Table of Contents
 1. Purpose of Package
 2. Installation Instructions
