@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sins',
-    version='0.1',    
+    version='0.1.0',    
     description='A python pacakged designed to create neutrino spectra for ' + \
                 'the radioactive decay of any isotope.',
     url='https://github.com/shortlab/2024-bnryan-single-isotope-neutrino-spectrum-generator',
