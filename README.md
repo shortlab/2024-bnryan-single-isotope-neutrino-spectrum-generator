@@ -36,7 +36,70 @@ pip install ast
 Once you have made the CSV file for your isotopes decay paths, running this program is quite simple.
 ```bash
 import sins
-sins('your_csv_file.csv')
+
+### Function 1
+sins.generate(csv_file, gen_files)
+    ''' 
+    Goal: Generate Neutrino Spectrum
+
+    Parameters
+    -----------
+    file_name: str
+               A string containing the name of the csv file with the decay paths.
+    gen_files: bolean
+               True/False for plotting the spectra and making the associated pdf/csv files.
+
+    Potential Returns
+    -----------------
+    energy: list
+            A list of the energies (in keV) that neutrinos from this isotope may 
+            have. This list is always returned.
+    spectrum: list
+              A list of the neutrino spectrum values (per keV per decay). This 
+              list is always returned.
+    beta_energies: list 
+                   A list of the energies (in keV) that betas from this isotope 
+                   may have. This list is only returned if the isotope decays 
+                   via beta decay and beta_energies does not equal energy.
+    beta_beta: list
+               A list of the beta spectrum values (per keV per decay). This list 
+               is only returned if the isotope decays via beta decay.
+    '''
+
+### Function 2
+sins.plot(energy, spectrum, particle, iso_name)
+    ''' 
+    Goal: Plot Spectra
+
+    Parameters
+    -----------
+    energy: list
+            The energies associated with the provided spectra.
+    spectrum: list
+              The number of particle per keV per decay.
+    particle: str
+              The particle being shown in the spectrum.
+    iso_name: str
+              Name of the isotope of interest.
+    '''
+
+### Function 3
+sins.make_csv(energy, spectrum, particle, iso_name)
+    ''' 
+    Goal: Generate csv file with the given spectrum data.
+
+    Parameters
+    -----------
+    energy: list
+            The energies associated with the provided spectra.
+    spectrum: list
+              The number of particle per keV per decay.
+    particle: str
+              The particle being shown in the spectrum.
+    iso_name: str
+              Name of the isotope of interest.
+    '''
+
 ```
 From here it should return the plot of your neutrino spectrum as well as a csv file with the spectrum data. If any of the decay paths were via beta decay, you will also get a plot of the beta spectrum and the associated csv file.
 
