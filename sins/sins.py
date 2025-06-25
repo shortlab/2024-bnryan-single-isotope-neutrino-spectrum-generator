@@ -9,8 +9,8 @@
 import csv
 import matplotlib.pyplot as plt
 
-from beta import beta_decay_spectrum
-from ec import ec_spectrum 
+from .beta import beta_decay_spectrum
+from .ec import ec_spectrum 
 
 ##########################
 ### Getting Inputs
