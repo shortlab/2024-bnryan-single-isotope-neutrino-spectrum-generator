@@ -135,6 +135,8 @@ def generate(file_name, gen_files) :
     -----------
     file_name: str
                A string containing the name of the csv file with the decay paths.
+    gen_files: bolean
+               True/False for plotting the spectra and making the associated pdf/csv files.
 
     Potential Returns
     -----------------
