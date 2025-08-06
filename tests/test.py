@@ -1,5 +1,5 @@
 import os
-from sins import generate
+from sins.sins import generate
 from sins.sins import read_file
 from sins.beta import beta_decay_spectrum
 from sins.ec import ec_spectrum
