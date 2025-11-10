@@ -8,6 +8,7 @@
 
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
 from sins.beta import beta_decay_spectrum
 from sins.ec import ec_spectrum 
@@ -188,7 +189,7 @@ def generate(file_name, gen_files) :
     elif beta_pathes != [] and ec_pathes != [] :
 
         # Fixing that beta energies is off by one due to normalization
-        ec_energies.ptp(0)
+        ec_energies = np.delete(ec_energies, [0])
         ec_nu.pop(0)
 
         if beta_energies[-1] > ec_energies[-1] :

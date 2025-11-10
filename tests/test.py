@@ -50,7 +50,7 @@ def run_tests():
 
     # Test generate function
     try:
-        results = generate(csv_path, gen_files=False)
+        results = generate(csv_path, gen_files=True)
         print(f"generate function: PASS - returned {len(results)} outputs")
     except Exception as e:
         print(f"generate function: FAIL - {e}")

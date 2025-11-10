@@ -17,9 +17,9 @@ Authors: B. N. Ryan* & J. A. Formaggio
 4. References
 
 ## 1. Installation Instructions
-You can simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install SINS. 
+You can use the package manager [pip](https://pip.pypa.io/en/stable/) to install SINS. Once the repository is downloaded simply run,
 ```bash
-pip install sins
+pip install .
 ```
 The other Python packages required to run this package successfully are [sys](https://docs.python.org/3/library/sys.html), [csv](https://docs.python.org/3/library/csv.html), [matplotlib](https://matplotlib.org/), [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/), and [ast](https://docs.python.org/3/library/ast.html). If you do not have them, they should install automatically upon installing sins.
 
@@ -65,18 +65,30 @@ To use the test file, simply run:
 python -m sins.test
 ```
 
-The test script defaults to using the Ir-192 example, but this can be manually changed. If everything is working properly, you should see output similar to the following:
+The test script defaults to using the Ir-192 example, but this can be manually changed. If everything is working properly, you should see output similar to the following: 
 ```bash
 Testing with file: ./test_cases/Ir-192/ir-192.csv
 read_file: PASS
-  start_iso: Ir-192
+  start_iso: ('Ir-192', 77, 192, 4.0, 1, 0.0, 0.0)
   beta_pathes count: 6
   ec_pathes count: 3
-beta_decay_spectrum: PASS - energies length: 500
-ec_spectrum: PASS - energies length: 200
-generate function: PASS - returned 2 outputs
+File Created: Ir-192_Neutrino_Spectrum.png
+File Created: Ir-192_Neutrino_Spectrum.png
+File Created: Ir-192_Beta_Spectrum.png
+File Created: Ir-192_Beta_Spectrum.png
+File Created: Ir-192_Neutrino_Spectrum.csv
+File Created: Ir-192_Neutrino_Spectrum.csv
+File Created: Ir-192_Beta_Spectrum.csv
+File Created: Ir-192_Beta_Spectrum.csv
+generate function: PASS - returned 4 outputs
 ```
-This confirms that all key functions ran successfully and produced valid spectra.
+This confirms that all key functions ran successfully and produced valid spectra. Do not be concerned if you got some divide by zero errors - those are expected. Those errors will look like:
+```bash
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sins/beta.py:89: RuntimeWarning: divide by zero encountered in scalar divide
+  y = α * Z * W / p(W)
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sins/beta.py:97: RuntimeWarning: invalid value encountered in scalar multiply
+  Ω = np.sqrt(np.abs(1 - l * W)) * (omega)**γ * np.exp(np.pi * y / 2) * np.abs(gamma(𝛋)) / gamma(β)
+```
 
 ## 3. Methodology [4][5]
 For electron capture, calculating the neutrino energy is simple, as it is equal to the Q value.  For beta decay, it is a bit more complicated.  The methodology, as well as the accuracy of the method used, are elaborated upon here.
