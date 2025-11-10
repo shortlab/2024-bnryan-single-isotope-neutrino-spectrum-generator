@@ -12,96 +12,18 @@ Authors: B. N. Ryan* & J. A. Formaggio
    a. CSV File Construction
 
    b. Test Cases
+
 3. Methodology
 4. References
 
 ## 1. Installation Instructions
-You can simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install SING. 
+You can simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install SINS. 
 ```bash
 pip install sins
 ```
-The other Python packages required to run this package successfully are [sys](https://docs.python.org/3/library/sys.html), [csv](https://docs.python.org/3/library/csv.html), [matplotlib](https://matplotlib.org/), [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/), and [ast](https://docs.python.org/3/library/ast.html). To install them you can simply run:
-
-```bash
-pip install sys
-pip install csv
-pip install matplotlib
-pip install numpy
-pip install scipy
-pip install skleanr
-pip install ast
-```
+The other Python packages required to run this package successfully are [sys](https://docs.python.org/3/library/sys.html), [csv](https://docs.python.org/3/library/csv.html), [matplotlib](https://matplotlib.org/), [numpy](https://numpy.org/), [scipy](https://scipy.org/), [sklearn](https://scikit-learn.org/stable/), and [ast](https://docs.python.org/3/library/ast.html). If you do not have them, they should install automatically upon installing sins.
 
 ## 2. Use Instructions
-Once you have made the CSV file for your isotopes decay paths, running this program is quite simple.
-```bash
-import sins
-
-### Function 1
-sins.generate(csv_file, gen_files)
-    ''' 
-    Goal: Generate Neutrino Spectrum
-
-    Parameters
-    -----------
-    file_name: str
-               A string containing the name of the csv file with the decay paths.
-    gen_files: bolean
-               True/False for plotting the spectra and making the associated pdf/csv files.
-
-    Potential Returns
-    -----------------
-    energy: list
-            A list of the energies (in keV) that neutrinos from this isotope may 
-            have. This list is always returned.
-    spectrum: list
-              A list of the neutrino spectrum values (per keV per decay). This 
-              list is always returned.
-    beta_energies: list 
-                   A list of the energies (in keV) that betas from this isotope 
-                   may have. This list is only returned if the isotope decays 
-                   via beta decay and beta_energies does not equal energy.
-    beta_beta: list
-               A list of the beta spectrum values (per keV per decay). This list 
-               is only returned if the isotope decays via beta decay.
-    '''
-
-### Function 2
-sins.plot(energy, spectrum, particle, iso_name)
-    ''' 
-    Goal: Plot Spectra
-
-    Parameters
-    -----------
-    energy: list
-            The energies associated with the provided spectra.
-    spectrum: list
-              The number of particle per keV per decay.
-    particle: str
-              The particle being shown in the spectrum.
-    iso_name: str
-              Name of the isotope of interest.
-    '''
-
-### Function 3
-sins.make_csv(energy, spectrum, particle, iso_name)
-    ''' 
-    Goal: Generate csv file with the given spectrum data.
-
-    Parameters
-    -----------
-    energy: list
-            The energies associated with the provided spectra.
-    spectrum: list
-              The number of particle per keV per decay.
-    particle: str
-              The particle being shown in the spectrum.
-    iso_name: str
-              Name of the isotope of interest.
-    '''
-
-```
-From here it should return the plot of your neutrino spectrum as well as a csv file with the spectrum data. If any of the decay paths were via beta decay, you will also get a plot of the beta spectrum and the associated csv file.
 
 ### a. CSV File Construction
 Writing the proper csv file is essential to the function of this package.  The file should contain 8 columns: Decay Type, Isotope, Z, A, Spin, Parity, Q, and Branching Ratio.  For this information I would recommend using the [KAERI Table of Nuclides](https://atom.kaeri.re.kr/nuchart/) [1] and the [IAEA Table of Nuclides](https://www-nds.iaea.org/relnsd/vcharthtml/VChartHTML.html)[2]. Here is an example csv file for Ir-192, which has both beta and electron capture paths:
@@ -125,7 +47,36 @@ Some important notes when writing these csv files:
 - Make sure your spin, Q, and branching ratio can be turned into floats.
 
 ### b. Test Cases
-In the test case folder there are four different example cases: Cs-137, Cd-109, Co-57, and Ir-192.  Feel free to run these to make sure everything is working before you begin using the package.
+In the tests folder there are four different example cases: Cs-137, Cd-109, Co-57, and Ir-192. Each of these includes a properly formatted CSV file describing its decay paths.
+
+To verify that sins is installed and running correctly, a standalone Python test script is provided: sins/test.py.
+This script automatically exercises all major components of the package, including:
+
+- read_file() — loads and parses the isotope decay CSV file.
+
+- beta_decay_spectrum() — generates the beta and antineutrino spectra for beta-decay paths.
+
+- ec_spectrum() — generates the neutrino spectrum for electron-capture paths.
+
+- generate() — runs the full workflow and returns computed spectra without saving any files.
+
+To use the test file, simply run:
+```bash
+python -m sins.test
+```
+
+The test script defaults to using the Ir-192 example, but this can be manually changed. If everything is working properly, you should see output similar to the following:
+```bash
+Testing with file: ./test_cases/Ir-192/ir-192.csv
+read_file: PASS
+  start_iso: Ir-192
+  beta_pathes count: 6
+  ec_pathes count: 3
+beta_decay_spectrum: PASS - energies length: 500
+ec_spectrum: PASS - energies length: 200
+generate function: PASS - returned 2 outputs
+```
+This confirms that all key functions ran successfully and produced valid spectra.
 
 ## 3. Methodology [4][5]
 For electron capture, calculating the neutrino energy is simple, as it is equal to the Q value.  For beta decay, it is a bit more complicated.  The methodology, as well as the accuracy of the method used, are elaborated upon here.
