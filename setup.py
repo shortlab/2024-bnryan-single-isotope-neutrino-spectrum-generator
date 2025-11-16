@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='sins',
-    version='0.1.0',
+    version='1.0.0',
     description='A Python package designed to create neutrino spectra for the radioactive decay of any isotope.',
     long_description=long_description,
     long_description_content_type="text/markdown",
